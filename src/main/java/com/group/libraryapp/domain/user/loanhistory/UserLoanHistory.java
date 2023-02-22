@@ -14,17 +14,21 @@ public class UserLoanHistory {
 
     private long userId;
 
-    private String bookname;
+    private  String bookName;
 
     private boolean isReturn;
 
     protected UserLoanHistory(){
 
     }
-    public UserLoanHistory(long userId, String bookname) {
+
+    public UserLoanHistory(long userId, String bookName) {
         this.userId = userId;
-        this.bookname = bookname;
+        this.bookName = bookName;
         this.isReturn = false;
     }
 
+    public void doReturn(){
+        this.isReturn = true;
+    }
 }
